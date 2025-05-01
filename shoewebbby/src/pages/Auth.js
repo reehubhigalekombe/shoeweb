@@ -1,8 +1,6 @@
 import React, {useState} from 'react';
 import axios from "axios";
 import { useNavigate } from 'react-router-dom';
-
-
 import "../styles/auth.css"
 
 function Auth() {
@@ -32,16 +30,23 @@ function Auth() {
         }
         setLoading(true)
         try {
-            const endPoint = isLogin? "https://mkcolectionsb-1.onrender.com/login" : "https://mkcolectionsb-1.onrender.com/signup";
-            const response = await axios.post(endPoint, formData);
+            const endPoint = isLogin
+            ? "https://mkcolectionsb-1.onrender.com/login"
+            : "https://mkcolectionsb-1.onrender.com/signup";
+
+            const payload = isLogin
+            ? { email: formData.email, password: formData.password }
+            : formData
+            const response = await axios.post(endPoint, payload );
             setMessage(response.data.message);
-            if(isLogin && response.data.token) {
+
+            if(response.data.token) {
                 localStorage.setItem("token", response.data.token);
                 navigate("/home")
-            } else if(!isLogin && response.data.message === "User registered Successfuly") {
-                navigate("/home")
-            }
+
+            } 
         } catch(error) {
+            console.error("Login/Signup error:", error);
             setMessage(error.response?.data?.message || "Something must have gone Wrong!!")
         } finally {
             setLoading(false)
