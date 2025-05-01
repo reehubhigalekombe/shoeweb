@@ -1,0 +1,25 @@
+.men {
+    width: 100%;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+}
+.men-top {
+    flex: 1;
+    background-color: rgb(100, 98, 98);
+}
+.men-top ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+    text-decoration: none;
+}
+.collections-bottom {
+    flex: 5;
+    flex-direction: row;
+}
+.product-link {
+    text-decoration: none;
+}

@@ -1,0 +1,26 @@
+.clarks {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+
+}
+.clarks-top {
+    flex: 1;
+    background-color: rgb(100, 98, 98);
+}
+.clarks-top ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+}
+.bottom {
+    display: flex;
+    flex-direction: row;
+    
+}

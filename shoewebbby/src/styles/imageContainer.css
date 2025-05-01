@@ -1,0 +1,29 @@
+.imageHomes {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: 120px;
+    background-color: #f9f9f9;
+}
+.slidingImages {
+    display: flex;
+    animation: slide 15s linear infinite;
+    will-change: transform;
+}
+.slidingImages img {
+    width: 180px;
+    height: 200px;
+    margin-right: 8px;
+    object-fit: cover;
+}
+.slidingImages img:hover {
+    transform: scale(1.1);
+}
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}

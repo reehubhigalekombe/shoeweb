@@ -1,0 +1,650 @@
+.video-container {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.backgroundVideo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+import React from 'react';
+import Instagram from "@mui/icons-material/Instagram";
+import Facebook from '@mui/icons-material/Facebook';
+import WhatsApp from '@mui/icons-material/WhatsApp';
+import YouTube from '@mui/icons-material/YouTube';
+import X from '@mui/icons-material/X';
+import LinkedIn from "@mui/icons-material/LinkedIn"
+import "../styles/footer.css"
+function Footer() {
+  return (
+    <div className='footer'>
+        <div className='footerColumn'>
+          <h1>Higal Please</h1>
+        </div>
+        <div><div className='footerCollumn'>
+    <a href='https://m.facebook.com/higal.ekombe.3/' target='_blank' rel="noopener noreferrer"  className='instagram' ><Instagram/></a>
+      <a href='https://m.facebook.com/higal.ekombe.3/' target='_blank' rel="noopener noreferrer" className='facebook'><Facebook/></a>
+      <a href='https://wa.link/tu37h1' target='_blank' rel="noopener noreferrer" className='whatsapp'><WhatsApp/></a>
+      <a href='https://youtube.com/@reagan3938?si=lgaVMxmyg7eJ_gBs' target='_blank' rel="noopener noreferrer" className='youtube'><YouTube/></a>
+      <a href='https://x.com/HigalEkomb52804' target='_blank' rel="noopener noreferrer"className='x'><X/></a>
+      <a href='https://www.linkedin.com/in/higal-ekombe-83172b278/' target='_blank' rel="noopener noreferrer" className='linkedin'><LinkedIn/></a></div>
+        <div className='rightSide'>
+            <p>&copy; 2024 Best Pizza In Town <a href="mailto:elonreaganp@gmail.com" style={{ color: 'blue', fontSize: "15px", fontWeight: 'bold', textDecoration: "none", fontStyle: "italic"}}>
+  Order via Email
+</a>
+</p>
+        </div>
+        <div className='footerColumn'>
+          <h1>Yes Mr.Footr</h1>
+        </div>
+        </div>
+     
+    </div>
+    <li> <a href='https://wa.link/tu37h1' target='_blank' rel="noopener noreferrer" className='whatsapp'><WhatsApp/></a></li>
+  )
+}
+
+export default Footer
+
+<ul>
+            <li><a href='https://m.facebook.com/higal.ekombe.3/' target='_blank' rel="noopener noreferrer"  className='instagram' ><Instagram/></a></li>
+            <li><a href='https://m.facebook.com/higal.ekombe.3/' target='_blank' rel="noopener noreferrer" className='facebook'><Facebook/></a></li>
+            <li> <a href='https://wa.link/tu37h1' target='_blank' rel="noopener noreferrer" className='whatsapp'><WhatsApp/></a></li>
+            <li><a href='https://youtube.com/@reagan3938?si=lgaVMxmyg7eJ_gBs' target='_blank' rel="noopener noreferrer" className='youtube'><YouTube/></a></li>
+            <li>      <a href='https://x.com/HigalEkomb52804' target='_blank' rel="noopener noreferrer"className='x'><X/></a></li>
+            <li> <a href='https://www.linkedin.com/in/higal-ekombe-83172b278/' target='_blank' rel="noopener noreferrer" className='linkedin'><LinkedIn/></a></li>
+            <li>  <a href='/ticktok' target='_blank'  rel="noopener noreferrer"><SiTiktok/></a></li>
+            <li>  <a href='/ticktok' target='_blank'  rel="noopener noreferrer"><FaPinterest/></a></li>
+          </ul>
+
+
+
+
+
+          import React from 'react'
+import  "../styles/productCard.css";
+const ProductCard = ({image, name, oldPrice, newPrice}) => {
+  return (
+    <div className='card'>
+      <img src={image}  alt={name} className='image'/>
+      <h3 className='itemName'>{name} </h3>
+      <div className='priceContainer'>
+    <span className='oldPrice'>Ksh.{oldPrice} </span>
+    <span className='newprice'>Ksh.{newPrice}</span>
+      </div>
+    </div>
+  )
+}
+export default ProductCard
+
+
+import React from 'react';
+import Sneekers  from "./assests/Bbq.jpg";
+import Sports  from "./assests/buffalo.jpg";
+import Rubber from "./assests/hawaiianpiz.jpg";
+import ProductCard from './pages/ProductCard';
+import Airforce from "./assests/meatpizz.jpg";
+import Slippers from "./assests/patrona.jpg";
+import Open from "./assests/peiza.jpg";
+import Gamboots from "./assests/spicychiken.jpg";
+function App() {
+  const products = [
+    {
+      image: Sneekers,
+      name: "Running Shoes",
+      oldPrice: 123,
+      newPrice: 100,
+    },
+    {
+      image: Airforce,
+      name: "Running Shoes",
+      oldPrice: 123,
+      newPrice: 100,
+    },
+    {
+      image: Slippers,
+      name: "Running Shoes",
+      oldPrice: 123,
+      newPrice: 100,
+    },
+    {
+      image: Open,
+      name: "Running Shoes",
+      oldPrice: 123,
+      newPrice: 100,
+    },
+    {
+      image: Gamboots ,
+      name: "Running Shoes",
+      oldPrice: 123,
+      newPrice: 100,
+    },
+    {
+      image: Rubber,
+      name: "Running Shoes",
+      oldPrice: 123,
+      newPrice: 100,
+    },
+    {
+      image: Sports,
+      name: "Running Shoes",
+      oldPrice: 123,
+      newPrice: 100,
+    },    
+  ]
+  return (
+    <div className='container'>
+      {
+        products.map((product, index) => (
+          <ProductCard
+          key={index} 
+          image = {product.image} 
+          name = {product.name}
+          oldPrice = {product.oldPrice}
+           newPrice = {product.newPrice} />
+        ))
+      }
+
+    </div>
+  )
+}
+
+export default App
+
+const ProductCard = () => {
+  return (
+    <div className='gridContainer'>
+        {products.map((product) => (
+            <div key={product.id} className='card'>
+                <img src={product.image}   alt={product.name} className='image'  />
+                <h3 className='name' >{product.name}</h3>
+                <div className='priceContainer'>
+                    <span className='oldPrice'>Kshs.{product.oldPrice}  </span>
+                    <span className='newPrice'>Kshs.{product.newPrice}  </span>
+                </div>
+                </div>
+
+        ))
+        }
+      
+    </div>
+  )
+}
+
+export default ProductCard
+
+
+import React, {useState} from 'react';
+import Pic from "../assests/spicychiken.jpg";
+import { Link } from 'react-router-dom';
+import "../styles/navbar.css";
+import ReorderIcon from '@mui/icons-material/Reorder';
+import SignIn from '../signin/SignIn';
+function Navbar() {
+  const [isSignInOpen, setSignInOpen ] = useState(false)
+  const toggleSignIn = () =>{
+    setSignInOpen(!isSignInOpen)
+  }
+  const [openLinks, setOpenLinks] = useState(false)
+  const toggleNavbar = () => {
+    setOpenLinks(!openLinks);
+  }
+  return (
+    <div className='navbar'>
+      <div>
+        <button onClick={toggleSignIn} style={styles.signinButton}>
+          {isSignInOpen ? "Close Sign In" : "Sign In"}
+          {isSignInOpen && <SignIn/>}
+        </button>
+      </div>
+      <div className='leftSide' id={openLinks ? "open" : "close"}>
+        <img src={Pic} alt="Yes"/> 
+        <div className='head'><h1>HiGAL PIZZA INN Co</h1></div>
+        <div className="hiddenLinks">
+        <Link to="/">Home</Link>
+        <Link to="/menu">Menu</Link>
+        <Link to="/shop">Shop Outlets</Link>
+        <Link to="/about">About Us</Link>
+        <Link to="/contact">Contact</Link>
+        </div>
+      </div>
+      <div className='rightSide'>
+        <Link to="/">Home</Link>
+        <Link to="/menu">Menu</Link>
+        <Link to="/shop">Shop Outlets</Link>
+        <Link to="/about">About Us</Link>
+        <Link to="/contact">Contact Us</Link>
+        <button onClick={toggleNavbar}>
+          <ReorderIcon/>
+        </button>
+        <div><button onClick={toggleSignIn} style={styles.signinButton}>
+          {isSignInOpen ? "Close Sign In" : "Sign In"}
+          {isSignInOpen && <SignIn/>}
+        </button></div>
+      </div>
+    </div>
+  )
+}
+const styles =  {
+  signInButton: {
+    padding: '30px 20px',
+    backgroundColor: '#007bff',
+    color: '#fff',
+    border: 'none',
+    borderRadius: '5px',
+    cursor: 'pointer',
+  }
+}
+
+export default Navbar
+
+
+.navbar {
+  top: 2px;
+  width: 100%;
+  padding: 10px  0;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  background-color: transparent;
+}
+.navbar .leftSide {
+  flex: 1;
+  align-items:center;
+  height: 100%;
+  padding-left: 50px;
+  display: flex;
+}
+.head {
+  color: rgb(7, 7, 63);
+  font-size: 20;
+  font-family: cursive;
+}
+.navbar .leftSide img {
+  width: 70px;
+  border-radius: 98px;
+}
+.navbar .rightSide {
+  flex: 1;
+  align-items: center;
+  height: 100%;
+  justify-content: end;
+  display: flex;
+}
+.navbar a{
+  margin: 15px;
+  text-decoration: none;
+  color: rgb(14, 14, 14);
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Times New Roman', Times, serif;
+}
+.navbar a:hover {
+  background-color: blue;
+  padding: 10px;
+  transition: box-shadow 0.5s ease;
+}
+.navbar .rightSide button {
+  background-color: transparent;
+  color: blue;
+  cursor: pointer;
+  border: none;
+}
+.navbar .rightSide svg {
+  font-size: 35px;
+}
+.navbar #open {
+  padding-left: 0px;
+}
+.navbar #open img {
+  display: none;
+}
+.navbar #close img {
+  display: inherit;
+}
+.navbar #open .hiddenLinks {
+  display: inherit;
+  margin: 30px;
+}
+.navbar #close .hiddenLinks {
+  display: none;
+}
+.navbar #open a {
+  width: 70px;
+  margin: 5px;
+}
+@media  only screen and (max-width: 900px) {
+  .navbar .rightSide a {
+    width: 70px;
+  }
+  .navbar .leftSide {
+    padding-left: 50px;
+  }
+  
+}
+@media only screen and (max-width: 600px) {
+  .navbar .rightSide a {
+    display: none;
+  }
+  .navbar .rightSide {
+    justify-content: flex-end;
+    padding-right: 50px;
+  }
+  .navbar .rightSide button {
+    display: inherit;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .navbar .rightSide button {
+    display: none;
+  }
+  .hiddenLinks {
+    display: none;
+  }
+  
+}
+
+<div className='split'>    
+<span> <Search/></span></div>
+<div  className='split'>
+<span> <ShoppingCart/></span></div>
+<div  className='split'>
+<span> <Notifications/></span></div>
+
+.footer {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+}
+.footerColumn {
+  flex: 1;
+  padding: 10px;
+  gap: 10px;
+  font-size: 30px;
+  justify-content: center;
+  align-items: center;
+}
+.contact a SVG {
+  font-size: 40px;
+}
+.instagram {
+  color: #e1306c;
+  
+}
+.facbook {
+  color: blue;
+}
+.youtube {
+  color: red;
+}
+.whatsapp {
+  color: green;
+}
+.x {
+  color: black;
+}
+.tiktok {
+  color: black;
+}
+.linkeedin {
+  color: blue;
+}
+
+
+<div className='bottom-right'>
+      
+{products.map((product) => (
+    <div key={product.id} className='card'>
+        <img src={product.image}   alt={product.name} className='image'  />
+        <h3 className='size'>{product.sizes}</h3>
+        <h3 className='name' >{product.name}</h3>
+ 
+        <div className='priceContainer'>
+            <span className='oldPrice'>Kshs.{product.oldPrice}  </span>
+            <span className='newPrice'>Kshs.{product.newPrice}  </span>
+        </div>
+        <div >
+          <ul className='menu'>
+          <li className='menuItem' ><a href='' target='_blank' rel='nonopener nonreferrer' style={{ fontSize: "40px", color: 'gray' }}><VisibilityOutlined/></a></li>
+          <li className='menuItem' ><a href='' target='_blank' rel='nonopener nonreferrer' style={{ fontSize: "40px", color: 'green' }}><WhatsApp/></a></li>
+          <li className='menuItem'><a href='' target='_blank' rel='nonopener nonreferrer' style={{ fontSize: "40px", color: 'grey' }}><ShoppingBasket/></a>   </li>
+          </ul>
+          </div>              
+        </div>
+))
+}
+
+</div>
+
+
+.bottom-right{ 
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  padding: 40px;
+}
+.card {
+  border: none;
+  text-align: justify;
+  border-radius: 8px;
+  padding: 5px;
+  background-color: whitesmoke;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.image {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 0px;
+}
+.name {
+  font-size: 18px;
+  margin: 3px 0;
+  color: black;
+  text-align: justify;
+}
+.size {
+  font-size: 14px;
+  text-align: justify;
+
+}
+.priceContainer {
+  display: flex;
+  text-align: justify;
+  gap: 10px;
+}
+.oldPrice {
+  text-decoration: line-through;
+  font-weight: bold;
+  font-size: 20px;
+  color: gray;
+  font-style: italic;
+}
+.newPrice {
+  color: green;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+<div className='slippers'>
+<div className='slipers-top'>
+  <ul className='menu'>
+    <li className='menuItem'><Link to="/home" className='link'>Home</Link></li>
+    <li>&gt;&gt;</li>
+    <li>
+    <Link to="/slips"  className='link'>Slips-On</Link></li> 
+  </ul>
+
+
+</div>
+<div className='slippers-bottom'>
+  <div className='botom-left'>
+<h1>Hello World</h1>
+  </div>
+  <div className='bottom-right'>
+    
+
+  </div>
+
+</div>
+
+</div>
+
+
+import React from 'react';
+import "../styles/home.css";
+import { Link } from 'react-router-dom';
+function Home() {
+  return (
+  <div className='home'>
+    <div className='topContainer'>
+      <div className='leftSection'>
+        <h1>Welcome to HiGAl PiZZA Inn Co.</h1>
+        <hr style={{color: "white", background: "white", width: "80%"}}/>
+        <h1>HOME OF THE BEST PiZZA </h1>
+        <hr style={{color: "red", width: "50%", background: "red"}}></hr>
+        <h1>Made Freshly Daily</h1>
+      </div>
+      <div className='rightSection'>
+        <h1>Hand-Made Fresh Cuts</h1>
+        <hr style={{color: "white", background: "white", width: "80%"}}/>
+        <h1>Testify Why Kenyans Love US</h1>
+        <hr style={{color: "red", width: "50%", background: "red"}}/>
+        <h1>Serving for 10yrs Strong</h1>
+      </div>
+    </div>
+    <div className='bottomContainer'>
+    <div className='topBottom'>
+    <div className='topBottom'> <h1>Fresh Ingrideints || Friendly Service || Kenyan Owned</h1>
+      <hr/>
+      <p>HiGAl PiZZA Inn Co. is a patnership owned joint which is Headquatered in Nairobi Makadara Sub-County.  From the time we begun Operations 
+      in late 2021, our main focus has been on Better service delivery by utilizing the Freshest  ingridients from the Kenyan Famers. We make our PiZZA from scratch in our shops distributed in major Towns across the Country
+      </p>
+      </div>
+    </div>
+    <div className='botBottom'> 
+      <Link to="/menu">
+     <button>Order Now</button>
+      </Link>
+      </div>
+    </div>
+  </div>
+  )
+}
+export default Home;
+
+.home {
+  height: 120vh;
+  display: flex;
+  flex-direction: column;
+}
+.topContainer {
+  flex: 1;
+  display: flex;
+  height: 40vh;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  margin-top: 10px;
+  text-align: center;
+  background-color: blue;
+}
+.topContainer .leftSection {
+flex: 1;
+justify-content: center;
+align-items: center;
+padding: 20px;
+text-align: center;
+background-color: blue;
+}
+.leftSection hr {
+  width: 80%;
+  border-radius: 5px;
+  margin: 10px auto;
+  height: 2px;
+}
+.leftSection h1 {
+  color: white;
+}
+.rightSection {
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  background-color: blue;
+}
+.rightSection hr {
+  width: 80%;
+  border-radius: 5px;
+  margin: 10px auto;
+  height: 2px;
+}
+.rightSection h1 {
+  color: white;
+}
+.bottomContainer {
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+.topBottom {
+flex: 1;
+justify-content: center;
+align-items: center;
+width: 100%;
+}
+.topBottom h1 {
+  color: red;
+}
+.topBottom  p {
+  text-align: center;
+  font-size: 20px;
+  padding: 20px 20px;
+  margin-top:  2px;
+}
+.topBottom  hr {
+  width: 75%;
+  color: blue;
+  height: 2px;
+  flex-direction: column;
+  background-color: blue;
+}
+
+.botBottom {
+  flex: 1;
+  justify-content: flex-start;
+}
+.botBottom button {
+  background-color: red;
+  color: white;
+  font-size: 30px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 15px 30px;
+  transition: background-color 0.3s ease, transform 0.2s ease; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.botBottom button:hover {
+  background-color: black;
+  transform: scale(1.05);
+}
+.botBottom button:active {
+  background-color: black;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); 
+  transform: scale(1);
+}

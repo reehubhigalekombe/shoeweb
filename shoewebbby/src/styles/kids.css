@@ -1,0 +1,21 @@
+.kids {
+    width: 100%;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+}
+.kids-top {
+    flex: 1;
+    background-color: rgb(100, 98, 98);
+}
+.kids-top ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+}
+.bottom {
+    flex: 5;
+    flex-direction: row;
+}

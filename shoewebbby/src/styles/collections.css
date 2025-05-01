@@ -1,0 +1,30 @@
+.collections{
+    width: 100%;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+}
+.collections-top {
+    flex: 1;
+    background-color: rgb(100, 98, 98);
+}
+.collections-top ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+    text-decoration: none;
+}
+.collections-bottom {
+    flex: 5;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    background-color: white;
+    padding: 10px;
+}
+.product-link {
+    text-decoration: none;
+}
+

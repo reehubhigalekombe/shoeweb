@@ -1,0 +1,40 @@
+.floating {
+    position: fixed;
+    z-index: 1000;
+    right: 30px;
+    bottom: 20px;
+    gap: 20px;
+}
+.floaters1 {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color:#25D366 ;
+    border-radius: 50%;
+    box-shadow:   "0 4px 8px rgba(0,0,0,0.2)";
+}
+.flo2aters2 {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color:blue ;
+    border-radius: 50%;
+    box-shadow:   "0 4px 8px rgba(0,0,0,0.2)";
+}
+.floaters3 {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color:black;
+    border-radius: 50%;
+    box-shadow:   "0 4px 8px rgba(0,0,0,0.2)";
+}

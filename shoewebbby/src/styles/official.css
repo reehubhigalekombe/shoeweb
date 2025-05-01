@@ -1,0 +1,25 @@
+.official {
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    padding-left: 0px;
+    margin-top: 0px;
+}
+.official-top {
+    flex: 1;
+    background-color: rgb(100, 98, 98);
+}
+.official-top ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+}
+.bottom {
+    flex: 5;
+    flex-direction: row;
+}
