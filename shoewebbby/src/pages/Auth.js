@@ -32,7 +32,7 @@ function Auth() {
         }
         setLoading(true)
         try {
-            const endPoint = isLogin? "http://localhost:5500/api/login" : "http://localhost:5500/api/signup";
+            const endPoint = isLogin? "https://mkcolectionsb-1.onrender.com/login" : "https://mkcolectionsb-1.onrender.com/signup";
             const response = await axios.post(endPoint, formData);
             setMessage(response.data.message);
             if(isLogin && response.data.token) {
