@@ -1,12 +1,14 @@
-import React, { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import "../styles/navbar.css";
 import ShoppingCart from '@mui/icons-material/ShoppingCart';
 import ReorderIcon from '@mui/icons-material/Reorder';
 import Notifications from '@mui/icons-material/Notifications';
 import SearchIcon from '@mui/icons-material/Search';
 import { Link, useNavigate } from 'react-router-dom';
+import Avatar from "@mui/material/Avatar"
 
 function Navbar() {
+  const navbarRef = useRef(null)
   const [openLinks, setOpenLinks] = useState(false);
   const [query, setQuery] = useState("");
   const navigate = useNavigate();
@@ -27,11 +29,26 @@ function Navbar() {
     }
   };
 
+  useEffect(() => {
+    const navbarHeight = navbarRef.current.offsetHeight;
+    document.documentElement.style.setProperty("--navbar-height", 
+     `${navbarHeight}px` 
+    );
+
+  }, [])
   return (
-    <nav className='navbar'>
+  <div className='navbar'  ref={navbarRef}>
+    <div className='nav-top'>
       <div className='nav-top'>
         <div className='left'>
-          <h3>MK COLLECTIONS</h3>
+        <Avatar className='ava'
+ sx={{
+        bgcolor: "red", width: 40, height:40, fontWeight: "bold",
+        marginLeft: "20px"
+    }}>
+    j
+ </Avatar>
+        </div>
         </div>
         <div className='middle'>
           <div className='search-bar'>
@@ -53,8 +70,9 @@ function Navbar() {
           <span className='icon'><Notifications /></span>
           <button className='menu-toggle' onClick={toggleNavbar}><ReorderIcon /></button>
         </div>
-      </div>
-      <div className={`nav-bottom ${openLinks ? "open" : ""}`}>
+
+    </div>
+          <div className={`nav-bottom ${openLinks ? "open" : ""}`}>
         <Link to="/home" className='link'>Home</Link>
         <Link to="/men" className='link'>Men</Link>
         <Link to="/women" className='link'>Women</Link>
@@ -66,7 +84,8 @@ function Navbar() {
         <Link to="/location" className='link'>Location</Link>
         <Link to="/newsletter" className='link'>Newsletter</Link>
       </div>
-    </nav>
+
+  </div>
   );
 }
 

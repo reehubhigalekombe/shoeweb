@@ -74,7 +74,7 @@ useEffect (() => {
         <Route path="/shoe.id"  element={<ShoesInformation/>} />
         <Route path="/search"   element={<SearchResults/>} />
         <Route path="/google"   element={<GoogleMap/>} />
-        <Route path="/location"   element={<Location/>} />
+        <Route path="/location"   element={<PrivateRoute><Location/></PrivateRoute>} />
         <Route path="/product/:id"   element={<ShoeDetails/>} />
         <Route path="/search" element={<SearchResults />} />
       </Routes>

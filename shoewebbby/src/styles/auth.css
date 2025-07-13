@@ -4,6 +4,7 @@
   min-height: 100vh;
   position: relative;
   display: flex;
+     margin-top: var(--navbar-height, 100px);
   flex-direction: column;
   
 
